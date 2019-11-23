@@ -4,9 +4,7 @@ import Checkbox from './components/Checkbox';
 import Commit from './components/Commit';
 import Select from './components/Select';
 import constants from './constants/strings';
-import styled from 'styled-components';
 import { GithubItem } from './constants/types';
-const CommitsContainer = styled.div``;
 
 const App: React.FC = () => {
   const [value, updateValue] = useState<string>(constants.defaultValue);
@@ -49,7 +47,14 @@ const App: React.FC = () => {
         <a href='https://groff.dev' target='_blank' rel='noopener noreferrer'>
           Matt Groff
         </a>{' '}
-        using the Github API
+        using the Github API.{' '}
+        <a
+          href='https://github.com/mattlgroff/f-all-the-things'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          Source on Github
+        </a>
       </p>
       <header className='App-header'>
         {censored ? 'F*** ' : 'Fuck '}
@@ -60,12 +65,12 @@ const App: React.FC = () => {
         />
       </header>
       <Checkbox value={censored} onCheck={updateCensored} /> Censored
-      <CommitsContainer>
+      <div>
         {commits.length === 0 && 'Loading'}
         {commits.map(commit => (
           <Commit key={commit.node_id} item={commit} censored={censored} />
         ))}
-      </CommitsContainer>
+      </div>
     </div>
   );
 };
