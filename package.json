@@ -36,5 +36,10 @@
   },
   "devDependencies": {
     "@types/styled-components": "^4.4.0"
+  },
+  "resolutions": {
+    "**/**/lodash": "^4.17.12",
+    "set-value": "^2.0.1",
+    "js-yaml": "^3.13.1 "
   }
 }
