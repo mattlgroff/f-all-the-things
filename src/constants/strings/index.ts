@@ -1,19 +1,25 @@
 const defaultValue = 'css';
 
 const options: string[] = [
+  'angular',
+  'ansible',
   defaultValue,
+  'ember',
   'git',
   'graphql',
   'html',
+  `ie11`,
   'java',
   'javascript',
+  `jquery`,
   'node',
   'oauth',
+  'react',
+  'redux',
   'ruby',
-  `apple`,
-  `google`,
-  `ie11`,
-  `jquery`,
+  'rust',
+  'typescript',
+  'vue',
 ];
 
 const githubApiUrl = 'https://api.github.com/search/commits';
